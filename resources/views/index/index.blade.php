@@ -25,11 +25,11 @@
                     {{ session('auth.name') }}
                 </a>
                 <dl class="layui-nav-child">
-                    <dd><a href="{{ url('/'.ADMIN_PATH . '/user/profile') }}" target="main">基本资料</a></dd>
+                    <dd><a href="{{ route('admin.user.profile') }}" target="main">基本资料</a></dd>
                     <dd>
                         <a onclick="event.preventDefault(); document.getElementById('logout-form').submit();"
-                           href="{{ url('/' . ADMIN_PATH. '/index/logout') }}"> 注销退出 </a>
-                        <form id="logout-form" action="{{ url('/' . ADMIN_PATH. '/index/logout') }}" method="POST" style="display: none;">
+                           href="{{ route('logout') }}"> 注销退出 </a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                             @csrf
                         </form>
                     </dd>
@@ -61,8 +61,8 @@
         </div>
     </div>
 
-    <div class="layui-body layui-layout-body">
-        <iframe name="main" frameborder="0" width="100%" height="100%" src="{{ url('/' . ADMIN_PATH. '/index/dashboard') }}"></iframe>
+    <div class="layui-body">
+        <iframe name="main" frameborder="0" width="100%" height="100%" src="{{ route('admin.dashboard') }}"></iframe>
     </div>
 
     <div class="layui-footer">

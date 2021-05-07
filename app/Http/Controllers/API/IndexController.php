@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
-use App\Http\Responses\Json;
+use Illuminate\Http\JsonResponse;
 
 /**
  * @OA\Info(title="JBCMS API", version="1.0", contact={"email": "support@jbcms.com"})
@@ -20,9 +20,9 @@ class IndexController extends Controller
      *  operationId="index",
      *  @OA\Response(response="200", description="An example resource")
      * )
-     * @return Json
+     * @return JsonResponse
      */
-    public function index(): Json
+    public function index(): JsonResponse
     {
         return $this->succeed([
             'name' => APP_NAME,

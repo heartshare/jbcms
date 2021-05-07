@@ -22,7 +22,7 @@ if (env('APP_DEBUG') && is_dir(__DIR__ . '/../vendor/zircote/swagger-php')) {
 
 Auth::routes();
 
-Route::namespace('Console')->prefix(ADMIN_PATH)->name('admin.')->group(function () {
+Route::namespace('Console')->prefix(ADMIN_PATH)->middleware('auth')->name('admin.')->group(function () {
     Route::get('/', 'IndexController@index')->name('index');
     Route::get('dashboard', 'IndexController@dashboard')->name('dashboard');
     Route::get('user', 'UserController@index')->name('user');
