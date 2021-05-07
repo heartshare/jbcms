@@ -1,4 +1,4 @@
-html, body {
+html {
     height: 100%;
 }
 
@@ -8,21 +8,20 @@ body {
     background-position: right bottom;
 }
 
-.login__form {
-    margin-top: 170px;
-    margin-bottom: 140px;
-    width: 430px;
-    height: 420px;
+.login__wrapper {
+    width: 460px;
+    height: 360px;
+    margin: 200px auto 0;
     background-color: white;
     border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
     -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
     -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
 }
 
 .form-signin {
     width: 100%;
-    max-width: 330px;
+    max-width: 420px;
     padding: 15px;
     margin: auto;
 }
