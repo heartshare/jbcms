@@ -13,10 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::namespace('API')->group(function() {
-	Route::get('/', 'IndexController@index');
+Route::namespace('API')->group(function () {
+    Route::prefix('user')->middleware('auth:api')->group(function () {
+        Route::get('/', 'UserController@index');
+        Route::get('profile', 'ProfileController@index');
+    });
 
-	Route::prefix('user')->middleware('auth:api')->group(function() {
-		Route::get('/', 'UserController@index');
-	});
+    Route::get('/{path?}', 'IndexController@index')->where('path', '[\w\-\/]+');
 });

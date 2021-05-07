@@ -14,9 +14,9 @@ use Illuminate\Http\Request;
 class IndexController extends Controller
 {
     /**
-     * @param Request $request
-     * @param ViewService $viewService
-     * @return Renderable
+     * @param \Illuminate\Http\Request $request
+     * @param \App\Services\ViewService $viewService
+     * @return \Illuminate\Contracts\Support\Renderable
      */
     public function index(Request $request, ViewService $viewService): Renderable
     {

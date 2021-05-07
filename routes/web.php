@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -30,5 +31,5 @@ Route::namespace('Console')->prefix(ADMIN_PATH)->middleware('auth')->name('admin
 });
 
 Route::namespace('Web')->group(function () {
-    Route::get('/{path?}', 'IndexController@index');
+    Route::get('/{path?}', 'IndexController@index')->where('path', '[\w\-\/]+');
 });
