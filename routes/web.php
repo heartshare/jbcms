@@ -13,6 +13,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+if (env('APP_DEBUG') && is_dir(__DIR__ . '/../vendor/zircote/swagger-php')) {
+    Route::get('swagger', function () {
+        $openapi = \OpenApi\scan(app_path('Http/Controllers'));
+        return response($openapi->toJson());
+    });
+}
+
+Route::namespace('Console')->prefix(ADMIN_PATH)->group(function () {
+    Route::get('/', 'IndexController@index');
+});
+
+Route::namespace('Web')->group(function () {
+    Route::get('/{path?}', 'IndexController@index');
 });
