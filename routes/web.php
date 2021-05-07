@@ -14,8 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 if (env('APP_DEBUG') && is_dir(__DIR__ . '/../vendor/zircote/swagger-php')) {
-    Route::get('swagger', function () {
-        $openapi = \OpenApi\scan(app_path('Http/Controllers'));
+    Route::get('swagger.json', function () {
+        $openapi = \OpenApi\scan(app_path('Http/Controllers/API'));
         return response($openapi->toJson());
     });
 }
