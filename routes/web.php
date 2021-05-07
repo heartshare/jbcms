@@ -20,8 +20,13 @@ if (env('APP_DEBUG') && is_dir(__DIR__ . '/../vendor/zircote/swagger-php')) {
     });
 }
 
-Route::namespace('Console')->prefix(ADMIN_PATH)->group(function () {
-    Route::get('/', 'IndexController@index');
+Auth::routes();
+
+Route::namespace('Console')->prefix(ADMIN_PATH)->name('admin.')->group(function () {
+    Route::get('/', 'IndexController@index')->name('index');
+    Route::get('dashboard', 'IndexController@dashboard')->name('dashboard');
+    Route::get('user', 'UserController@index')->name('user');
+    Route::get('user/profile', 'UserController@profile')->name('user.profile');
 });
 
 Route::namespace('Web')->group(function () {
