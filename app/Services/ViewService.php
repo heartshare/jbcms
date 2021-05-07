@@ -22,7 +22,7 @@ class ViewService
     {
         $path = $request->path();
 
-        View::addNamespace('frontend', public_path('themes/default/html'));
+        View::addNamespace('frontend', public_path('themes/default'));
 
         if ($path === '/') {
             return view('frontend::index');

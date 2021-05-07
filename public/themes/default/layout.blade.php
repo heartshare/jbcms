@@ -7,8 +7,8 @@
     <title>{{ $page_title ?? '' }}</title>
     <meta name="keywords" content="{{ $page_keywords ?? '' }}"/>
     <meta name="description" content="{{ $page_description ?? ''}}"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sentsin/layui@v2.6.2/dist/css/layui.css">
-    <script src="https://cdn.jsdelivr.net/gh/sentsin/layui@v2.6.2/dist/layui.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sentsin/layui@v2.6.5/dist/layui.js">
+    <script src="https://cdn.jsdelivr.net/gh/sentsin/layui@v2.6.5/dist/layui.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.min.js"></script>
     <link rel="stylesheet" href="{{ skin('css/app.css') }}">
     <script type="text/javascript">

@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
     <meta name="renderer" content="webkit">
     <title>{{ config('app.name', 'JBCMS') }}</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sentsin/layui@v2.6.2/dist/css/layui.css">
-    <script src="https://cdn.jsdelivr.net/gh/sentsin/layui@v2.6.2/dist/layui.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sentsin/layui@v2.6.5/dist/layui.js">
+    <script src="https://cdn.jsdelivr.net/gh/sentsin/layui@v2.6.5/dist/layui.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.min.js"></script>
     <link rel="stylesheet" href="{{ asset('static/console/css/auth.css?v=' . VERSION) }}">
 </head>
