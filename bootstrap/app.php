@@ -5,9 +5,9 @@ define('VERSION', 'v1.0.0-dev');
 define('RELEASE', '20210507');
 define('ADMIN_PATH', 'admin');
 
-$_ENV['APP_DEBUG'] = in_array(@$_SERVER['REMOTE_ADDR'], ['127.0.0.1', '::1']);
-
 try {
+	$_ENV['APP_DEBUG'] = in_array(@$_SERVER['REMOTE_ADDR'], ['127.0.0.1', '::1']);
+	$_ENV['APP_ENV'] = $_ENV['APP_DEBUG'] ? 'local' : 'production';
     $_ENV['APP_KEY'] = 'base64:' . base64_encode(md5(__FILE__));
 } catch (Exception $e) {
     die($e->getMessage());

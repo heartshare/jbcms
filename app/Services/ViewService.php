@@ -34,9 +34,9 @@ class ViewService
     /**
      * 获取内容视图模板
      * @param $path
-     * @return mixed|string
+     * @return Renderable
      */
-    private function template($path): string
+    private function template($path): Renderable
     {
         $content = Article::where('title', $path)->first();
 
