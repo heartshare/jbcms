@@ -37,7 +37,7 @@ class RuleService
                 foreach ($filtered->all() as $v) {
                     $sub[] = [
                         'name' => $v['title'],
-                        'url' => url('/' . ADMIN_PATH . '/' . $v['name']),
+                        'url' => route('admin.' . $v['name']),
                         'icon' => $v['icon'],
                     ];
                 }

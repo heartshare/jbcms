@@ -49,8 +49,8 @@
                     <dl class="layui-nav-child">
                         @foreach($item['sub'] as $vo)
                         <dd>
-							<a href="{$vo['url']}" target="main">
-								<i class="layui-icon {$vo['icon']}"></i> {{ $vo['name'] }}
+							<a href="{{ $vo['url'] }}" target="main">
+								<i class="layui-icon {{ $vo['icon'] }}"></i> {{ $vo['name'] }}
                             </a>
                         </dd>
                         @endforeach
@@ -62,7 +62,7 @@
     </div>
 
     <div class="layui-body">
-        <iframe name="main" frameborder="0" width="100%" height="100%" src="{{ route('admin.dashboard') }}"></iframe>
+        <iframe name="main" frameborder="0" width="100%" height="100%" src="{{ route('admin.index.dashboard') }}"></iframe>
     </div>
 
     <div class="layui-footer">
