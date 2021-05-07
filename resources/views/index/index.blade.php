@@ -2,8 +2,8 @@
 
 @section('content')
 <div class="layui-layout layui-layout-admin">
-    <div class="eims-header">
-        <div class="layui-logo layui-bg-ant">
+  <div class="layui-header">
+        <div class="layui-logo">
             管理后台
         </div>
         <ul class="layui-nav layui-layout-right">
@@ -38,17 +38,21 @@
         </ul>
     </div>
 
-    <div class="layui-side layui-bg-ant">
-        <div id="menu" class="layui-side-scroll">
-            <ul class="layui-nav layui-bg-ant layui-nav-tree">
+    <div class="layui-side layui-bg-black">
+        <div class="layui-side-scroll">
+            <ul class="layui-nav layui-nav-tree">
                 @foreach($menu as $key => $item)
                 <li class="layui-nav-item @if($key == 0) layui-nav-itemed @endif">
-                    <a href="{{ $item['url'] }}"><i
-                        class="layui-icon {{ $item['icon'] }}"></i> {{ $item['name'] }}</a>
+                    <a href="{{ $item['url'] }}">
+						<i class="layui-icon {{ $item['icon'] }}"></i> {{ $item['name'] }}
+					</a>
                     <dl class="layui-nav-child">
                         @foreach($item['sub'] as $vo)
-                        <dd><a href="{$vo['url']}" target="main">
-                            <i class="layui-icon {$vo['icon']}"></i> {{ $vo['name'] }}</a></dd>
+                        <dd>
+							<a href="{$vo['url']}" target="main">
+								<i class="layui-icon {$vo['icon']}"></i> {{ $vo['name'] }}
+                            </a>
+                        </dd>
                         @endforeach
                     </dl>
                 </li>
