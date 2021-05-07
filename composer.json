@@ -4,6 +4,13 @@
     "description": "The JB Content Management System.",
     "keywords": ["jbcms", "php", "cms", "laravel"],
     "license": "Apache-2.0",
+    "homepage": "https://www.jbcms.com/",
+    "support": {
+        "issues": "https://github.com/daosoft/jbcms/issues?state=open",
+        "forum": "http://www.jbcms.com/forum/",
+        "wiki": "http://www.jbcms.com/wiki/",
+        "source": "https://github.com/daosoft/jbcms"
+    },
     "require": {
         "php": "^8.0",
         "fideloper/proxy": "^4.4",
