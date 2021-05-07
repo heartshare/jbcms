@@ -33,12 +33,4 @@ class IndexController extends CommonController
     {
         return view('index/dashboard');
     }
-
-    /**
-     * @return RedirectResponse
-     */
-    public function logout(): RedirectResponse
-    {
-        return redirect('/' . ADMIN_PATH);
-    }
 }
